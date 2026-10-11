@@ -437,6 +437,22 @@ body.tone-east .profile.over, body.tone-west .profile.over { --ring: var(--surfa
 .avatar-link .avatar { display: grid; }
 /* 顶部路径：字稍大一点，好点 */
 .crumbs { font-size: .9375rem; }
+
+/* ============ 中英文切换按钮（左上角，首页二字旁边） ============ */
+.lang-btn { margin-left: 14px; margin-right: auto; font: inherit; font-size: .8125rem; line-height: 1; padding: 6px 11px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: var(--muted); cursor: pointer; opacity: .85; }
+.lang-btn:hover { opacity: 1; color: var(--accent); }
+body.is-home .lang-btn, body.is-desk .lang-btn { color: var(--on-image); }
+/* 英文版：标题不用中文的字距，长单词可以换行 */
+html[lang="en"] h1, html[lang="en"] h2 { letter-spacing: 0; overflow-wrap: anywhere; }
+/* 英文版首页：大标题小一点，保持一行；页尾那句字距收一点 */
+html[lang="en"] .hero h1 { font-size: clamp(1.4rem, 3vw, 1.95rem); letter-spacing: 0; }
+@media (min-width: 760px) { html[lang="en"] .hero h1 { white-space: nowrap; } }
+html[lang="en"] .closing { letter-spacing: .12em; }
+
+/* 求助提示里的热线清单 */
+.guide-care ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+.guide-care a { color: var(--accent); font-weight: 600; }
+.guide-care .hint { color: var(--ink); opacity: .7; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lg" viewBox="-6 -214 529 346"><mask id="lg-m1" maskUnits="userSpaceOnUse" x="-6" y="-214" width="529" height="346"><rect x="-6" y="-214" width="529" height="346" fill="#fff"/><path d="M533 713 647 698 651 316C653 135 586 62 470 62C355 62 295 129 295 312V406L296 704L392 713V747H36V713L122 705C125 605 125 504 125 406V297C125 61 245 -20 417 -20C595 -20 692 84 695 314L699 698L802 713V747H533Z" transform="translate(-2.90 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M605 -2H693V699L792 713V747H514V713L649 699V478L653 219L287 747H41V713L117 705L133 681V49L35 34V0H312V34L185 48V230L174 621Z" transform="translate(74.21 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M41 713 131 705C134 602 134 499 134 395V351C134 247 134 144 131 43L41 34V0H395V34L306 43C304 146 304 249 304 352V395C304 499 304 603 306 705L395 713V747H41Z" transform="translate(152.29 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M494 716 601 701 429 162 252 704 360 716V747H6V713L70 707L320 -2H412L659 703L740 717V747H494Z" transform="translate(191.86 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M554 548H612L613 747H41V713L131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H634L632 207H576L530 39H305C303 143 303 249 303 360V363H440L454 263H504V505H454L439 399H303C303 505 303 608 305 708H510Z" transform="translate(261.30 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M41 713 131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H395V34L303 43C300 145 300 248 300 353H348C425 353 449 313 463 231L492 93C502 12 553 -15 645 -15C695 -15 723 -10 764 0V34L675 40L644 204C627 303 591 359 460 376C618 400 673 477 673 559C673 678 577 747 402 747H41ZM303 709H359C460 709 513 655 513 556C513 465 470 390 358 390H300C300 505 300 608 303 709Z" transform="translate(323.64 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M284 -20C472 -20 574 71 574 204C574 317 519 377 369 444L317 468C246 500 208 537 208 606C208 681 266 725 353 725C378 725 398 722 418 713L469 546H527L535 710C482 746 411 767 332 767C169 767 59 690 59 555C59 435 130 368 264 307L312 286C392 250 420 215 420 148C420 70 366 23 267 23C229 23 199 27 169 38L116 212H58L51 40C111 1 202 -20 284 -20Z" transform="translate(395.81 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M554 548H612L613 747H41V713L131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H634L632 207H576L530 39H305C303 143 303 249 303 360V363H440L454 263H504V505H454L439 399H303C303 505 303 608 305 708H510Z" transform="translate(452.50 0) scale(0.1000 -0.1000)" fill="#000" stroke="#000" stroke-width="60" stroke-linejoin="round"/><path d="M224.3,31.6 L227.6,28.1 L230.9,24.5 L234.2,20.9 L237.5,17.2 L240.8,13.5 L244.1,9.8 L247.4,6.1 L250.7,2.3 L254.1,-1.4 L257.4,-5.2 L260.7,-9.0 L264.0,-12.8 L267.3,-16.6 L270.6,-20.4 L273.9,-24.3 L277.2,-28.1 L280.5,-31.9 L283.8,-35.6 L287.0,-39.4 L290.3,-43.2 L293.6,-46.9 L296.8,-50.6 L300.1,-54.3 L303.3,-57.9 L306.5,-61.6 L309.7,-65.1 L312.9,-68.7 L316.1,-72.2 L319.3,-75.6 L322.5,-79.0 L293.2,-106.3 L289.9,-102.8 L286.6,-99.2 L283.3,-95.6 L280.0,-91.9 L276.7,-88.2 L273.4,-84.5 L270.1,-80.8 L266.8,-77.0 L263.5,-73.3 L260.2,-69.5 L256.9,-65.7 L253.6,-61.9 L250.3,-58.1 L247.0,-54.3 L243.7,-50.5 L240.4,-46.7 L237.1,-42.9 L233.8,-39.1 L230.5,-35.3 L227.2,-31.5 L224.0,-27.8 L220.7,-24.1 L217.5,-20.4 L214.2,-16.8 L211.0,-13.2 L207.8,-9.6 L204.6,-6.0 L201.4,-2.5 L198.3,0.9 L195.1,4.3 Z" fill="#000"/><path d="M321.5,3.3 L318.4,-0.1 L315.2,-3.5 L312.0,-7.1 L308.5,-10.3 L304.8,-13.5 L301.0,-16.6 L297.3,-19.8 L293.5,-23.1 L289.7,-26.3 L285.9,-29.6 L282.1,-32.9 L278.3,-36.3 L274.5,-39.6 L270.7,-42.9 L266.9,-46.3 L263.1,-49.7 L259.2,-53.0 L255.4,-56.4 L251.6,-59.7 L247.8,-63.0 L244.0,-66.3 L240.1,-69.6 L236.3,-72.9 L232.5,-76.1 L228.7,-79.3 L225.0,-82.5 L221.2,-85.6 L218.0,-89.2 L212.5,-84.2 L215.7,-80.7 L218.5,-76.6 L221.2,-72.6 L223.9,-68.5 L226.7,-64.3 L229.4,-60.2 L232.2,-56.0 L234.9,-51.8 L237.7,-47.6 L240.5,-43.4 L243.2,-39.1 L246.0,-34.9 L248.8,-30.6 L251.5,-26.3 L254.3,-22.1 L257.1,-17.8 L259.9,-13.6 L262.7,-9.3 L265.4,-5.1 L268.2,-0.9 L271.0,3.4 L273.8,7.5 L276.6,11.7 L279.4,15.9 L282.4,19.8 L285.7,23.4 L289.0,27.0 L292.3,30.6 Z" fill="#000"/></mask><mask id="lg-m2" maskUnits="userSpaceOnUse" x="-6" y="-214" width="529" height="346"><rect x="-6" y="-214" width="529" height="346" fill="#fff"/><path d="M224.3,31.6 L227.6,28.1 L230.9,24.5 L234.2,20.9 L237.5,17.2 L240.8,13.5 L244.1,9.8 L247.4,6.1 L250.7,2.3 L254.1,-1.4 L257.4,-5.2 L260.7,-9.0 L264.0,-12.8 L267.3,-16.6 L270.6,-20.4 L273.9,-24.3 L277.2,-28.1 L280.5,-31.9 L283.8,-35.6 L287.0,-39.4 L290.3,-43.2 L293.6,-46.9 L296.8,-50.6 L300.1,-54.3 L303.3,-57.9 L306.5,-61.6 L309.7,-65.1 L312.9,-68.7 L316.1,-72.2 L319.3,-75.6 L322.5,-79.0 L293.2,-106.3 L289.9,-102.8 L286.6,-99.2 L283.3,-95.6 L280.0,-91.9 L276.7,-88.2 L273.4,-84.5 L270.1,-80.8 L266.8,-77.0 L263.5,-73.3 L260.2,-69.5 L256.9,-65.7 L253.6,-61.9 L250.3,-58.1 L247.0,-54.3 L243.7,-50.5 L240.4,-46.7 L237.1,-42.9 L233.8,-39.1 L230.5,-35.3 L227.2,-31.5 L224.0,-27.8 L220.7,-24.1 L217.5,-20.4 L214.2,-16.8 L211.0,-13.2 L207.8,-9.6 L204.6,-6.0 L201.4,-2.5 L198.3,0.9 L195.1,4.3 Z" fill="#000"/><path d="M321.5,3.3 L318.4,-0.1 L315.2,-3.5 L312.0,-7.1 L308.5,-10.3 L304.8,-13.5 L301.0,-16.6 L297.3,-19.8 L293.5,-23.1 L289.7,-26.3 L285.9,-29.6 L282.1,-32.9 L278.3,-36.3 L274.5,-39.6 L270.7,-42.9 L266.9,-46.3 L263.1,-49.7 L259.2,-53.0 L255.4,-56.4 L251.6,-59.7 L247.8,-63.0 L244.0,-66.3 L240.1,-69.6 L236.3,-72.9 L232.5,-76.1 L228.7,-79.3 L225.0,-82.5 L221.2,-85.6 L218.0,-89.2 L212.5,-84.2 L215.7,-80.7 L218.5,-76.6 L221.2,-72.6 L223.9,-68.5 L226.7,-64.3 L229.4,-60.2 L232.2,-56.0 L234.9,-51.8 L237.7,-47.6 L240.5,-43.4 L243.2,-39.1 L246.0,-34.9 L248.8,-30.6 L251.5,-26.3 L254.3,-22.1 L257.1,-17.8 L259.9,-13.6 L262.7,-9.3 L265.4,-5.1 L268.2,-0.9 L271.0,3.4 L273.8,7.5 L276.6,11.7 L279.4,15.9 L282.4,19.8 L285.7,23.4 L289.0,27.0 L292.3,30.6 Z" fill="#000"/></mask><mask id="lg-m3" maskUnits="userSpaceOnUse" x="-6" y="-214" width="529" height="346"><rect x="-6" y="-214" width="529" height="346" fill="#fff"/><path d="M321.5,3.3 L318.4,-0.1 L315.2,-3.5 L312.0,-7.1 L308.5,-10.3 L304.8,-13.5 L301.0,-16.6 L297.3,-19.8 L293.5,-23.1 L289.7,-26.3 L285.9,-29.6 L282.1,-32.9 L278.3,-36.3 L274.5,-39.6 L270.7,-42.9 L266.9,-46.3 L263.1,-49.7 L259.2,-53.0 L255.4,-56.4 L251.6,-59.7 L247.8,-63.0 L244.0,-66.3 L240.1,-69.6 L236.3,-72.9 L232.5,-76.1 L228.7,-79.3 L225.0,-82.5 L221.2,-85.6 L218.0,-89.2 L212.5,-84.2 L215.7,-80.7 L218.5,-76.6 L221.2,-72.6 L223.9,-68.5 L226.7,-64.3 L229.4,-60.2 L232.2,-56.0 L234.9,-51.8 L237.7,-47.6 L240.5,-43.4 L243.2,-39.1 L246.0,-34.9 L248.8,-30.6 L251.5,-26.3 L254.3,-22.1 L257.1,-17.8 L259.9,-13.6 L262.7,-9.3 L265.4,-5.1 L268.2,-0.9 L271.0,3.4 L273.8,7.5 L276.6,11.7 L279.4,15.9 L282.4,19.8 L285.7,23.4 L289.0,27.0 L292.3,30.6 Z" fill="#000"/></mask><mask id="lg-m4" maskUnits="userSpaceOnUse" x="-6" y="-214" width="529" height="346"><rect x="-6" y="-214" width="529" height="346" fill="#fff"/><g transform="translate(160.92 -164.42) rotate(26.0)"><path d="M11.59,-13.07 C18.97,-12.65 25.30,-8.85 28.46,-5.06 C21.08,-6.32 14.76,-8.43 11.59,-13.07 Z" fill="#000"/><path d="M11.59,13.07 C18.97,12.65 25.30,8.85 28.46,5.06 C21.08,6.32 14.76,8.43 11.59,13.07 Z" fill="#000"/></g></mask><g mask="url(#lg-m1)"><path class="lg-snake" d="M167.5,-176.0 L164.8,-177.9 L162.0,-179.7 L159.2,-181.5 L156.0,-183.2 L152.8,-184.8 L149.5,-186.3 L146.1,-187.7 L142.6,-188.9 L139.1,-190.0 L135.6,-190.9 L132.0,-191.7 L128.4,-192.3 L124.7,-192.9 L121.0,-193.2 L117.3,-193.4 L113.6,-193.2 L109.9,-192.9 L106.2,-192.4 L102.5,-191.7 L98.9,-191.0 L95.3,-190.0 L91.8,-188.9 L88.2,-187.7 L84.8,-186.3 L81.4,-184.8 L78.1,-183.2 L74.8,-181.4 L71.8,-179.6 L68.9,-177.8 L66.1,-175.7 L63.8,-174.2 L61.5,-172.6 L59.2,-170.8 L56.9,-168.8 L54.6,-166.7 L52.4,-164.5 L50.3,-162.1 L48.2,-159.7 L46.3,-157.2 L44.4,-154.7 L42.5,-152.0 L40.8,-149.2 L39.1,-146.4 L37.5,-143.5 L36.0,-140.6 L34.5,-137.6 L33.1,-134.5 L31.7,-131.3 L30.4,-128.1 L29.2,-124.8 L28.0,-121.5 L26.8,-118.1 L25.8,-114.6 L24.8,-111.1 L23.8,-107.6 L22.9,-104.0 L22.0,-100.3 L21.2,-96.6 L20.5,-92.9 L19.8,-89.2 L19.1,-85.4 L18.5,-81.5 L18.0,-77.7 L17.5,-73.8 L17.1,-69.8 L16.7,-65.9 L16.3,-61.9 L16.1,-58.0 L15.8,-54.0 L15.6,-50.0 L15.5,-46.0 L15.4,-41.9 L15.4,-37.9 L15.4,-33.9 L15.5,-29.9 L15.6,-25.9 L15.8,-21.9 L16.0,-17.9 L16.3,-13.9 L16.6,-9.9 L16.9,-6.0 L17.4,-2.0 L17.9,1.9 L18.4,5.7 L19.0,9.6 L19.6,13.4 L20.3,17.2 L21.0,20.9 L21.8,24.6 L22.6,28.2 L23.5,31.9 L24.5,35.4 L25.5,38.9 L26.5,42.4 L27.6,45.8 L28.8,49.2 L30.0,52.5 L31.3,55.7 L32.7,58.9 L34.1,62.0 L35.5,65.0 L37.1,68.0 L38.7,70.9 L40.3,73.8 L42.0,76.5 L43.8,79.2 L45.7,81.8 L47.7,84.3 L49.7,86.8 L51.8,89.1 L53.9,91.4 L56.2,93.5 L58.5,95.6 L61.0,97.5 L63.5,99.3 L66.1,101.0 L68.7,102.6 L71.4,104.1 L74.3,105.4 L77.1,106.5 L80.1,107.5 L83.0,108.4 L86.1,109.1 L89.1,109.7 L92.2,110.1 L95.3,110.3 L98.5,110.4 L101.6,110.3 L104.8,110.1 L107.9,109.7 L111.1,109.3 L114.2,108.6 L117.4,107.9 L120.5,107.0 L123.6,106.0 L126.8,104.9 L129.9,103.7 L133.0,102.3 L136.1,100.9 L139.2,99.3 L142.4,97.7 L145.5,95.9 L148.6,94.1 L151.7,92.1 L154.9,90.1 L158.0,88.0 L161.1,85.8 L164.3,83.5 L167.4,81.1 L170.6,78.6 L173.7,76.0 L176.9,73.4 L180.1,70.7 L183.3,67.9 L186.5,65.1 L189.7,62.1 L192.9,59.2 L196.1,56.1 L199.3,53.0 L202.6,49.8 L205.8,46.5 L209.1,43.3 L212.3,39.9 L215.6,36.5 L218.9,33.1 L222.1,29.6 L225.4,26.0 L228.7,22.5 L232.0,18.8 L235.3,15.2 L238.6,11.5 L241.9,7.8 L245.2,4.1 L248.5,0.3 L251.8,-3.4 L255.1,-7.2 L258.4,-11.0 L261.7,-14.8 L265.0,-18.6 L268.3,-22.4 L271.6,-26.2 L274.9,-30.0 L278.2,-33.8 L281.5,-37.6 L284.8,-41.4 L288.1,-45.1 L291.3,-48.9 L294.6,-52.6 L297.8,-56.3 L301.1,-59.9 L304.3,-63.6 L307.5,-67.1 L310.7,-70.7 L313.9,-74.2 L317.1,-77.7 L320.3,-81.1 L323.4,-84.4 L326.6,-87.7 L329.7,-91.0 L332.8,-94.2 L335.8,-97.3 L338.9,-100.3 L341.9,-103.3 L345.0,-106.2 L348.0,-109.1 L350.9,-111.9 L353.9,-114.5 L356.8,-117.1 L359.7,-119.7 L362.5,-122.1 L365.3,-124.4 L368.1,-126.7 L370.9,-128.8 L373.6,-130.9 L376.3,-132.9 L378.9,-134.7 L381.5,-136.5 L384.1,-138.2 L386.6,-139.7 L389.1,-141.2 L391.5,-142.5 L393.8,-143.8 L396.1,-144.9 L398.4,-146.0 L400.6,-146.9 L402.7,-147.8 L404.8,-148.5 L406.8,-149.1 L408.7,-149.7 L410.6,-150.1 L412.4,-150.5 L414.1,-150.7 L415.8,-150.9 L417.4,-151.0 L419.0,-151.1 L420.5,-151.0 L421.9,-150.9 L423.3,-150.7 L424.6,-150.5 L426.0,-150.2 L427.2,-149.8 L428.5,-149.4 L429.8,-148.9 L431.0,-148.3 L432.2,-147.7 L433.5,-146.9 L434.7,-146.1 L435.9,-145.2 L437.2,-144.2 L438.4,-143.1 L439.6,-142.0 L440.9,-140.7 L442.1,-139.3 L443.3,-137.8 L444.6,-136.2 L445.8,-134.5 L447.0,-132.7 L448.1,-130.8 L449.3,-128.9 L450.4,-126.8 L451.6,-124.6 L452.7,-122.3 L453.7,-119.9 L454.8,-117.5 L455.8,-115.0 L456.7,-112.3 L457.7,-109.6 L458.6,-106.8 L459.5,-104.0 L460.3,-101.1 L461.1,-98.1 L461.8,-95.0 L462.6,-91.9 L463.2,-88.7 L463.9,-85.5 L464.5,-82.3 L465.0,-78.9 L465.5,-75.6 L466.0,-72.2 L466.4,-68.7 L466.8,-65.3 L467.1,-61.8 L467.4,-58.3 L467.6,-54.7 L467.8,-51.2 L468.0,-47.6 L468.1,-44.0 L468.1,-40.4 L468.2,-36.8 L468.1,-33.2 L468.1,-29.6 L467.9,-26.1 L467.8,-22.5 L467.6,-18.9 L467.3,-15.4 L467.0,-11.9 L466.7,-8.4 L466.3,-5.0 L465.8,-1.5 L465.4,1.9 L464.9,5.2 L464.3,8.5 L463.7,11.8 L463.0,15.0 L462.4,18.1 L461.6,21.2 L460.9,24.3 L460.1,27.2 L459.2,30.1 L458.3,33.0 L457.4,35.7 L456.5,38.4 L455.5,41.0 L454.5,43.5 L453.4,45.9 L452.3,48.3 L451.2,50.5 L450.1,52.7 L449.0,54.7 L447.8,56.7 L446.6,58.6 L445.4,60.3 L444.2,62.0 L443.0,63.5 L441.7,65.0 L440.5,66.4 L439.3,67.6 L438.0,68.8 L436.8,69.8 L435.6,70.8 L434.3,71.7 L433.1,72.4 L431.9,73.2 L430.6,73.8 L429.4,74.3 L428.1,74.8 L426.9,75.2 L425.6,75.6 L424.3,75.9 L422.9,76.1 L421.5,76.3 L420.0,76.4 L418.5,76.4 L417.0,76.3 L415.3,76.2 L413.6,76.0 L411.9,75.7 L410.1,75.3 L408.2,74.8 L406.2,74.3 L404.2,73.6 L402.1,72.8 L399.9,72.0 L397.7,71.0 L395.5,69.9 L393.1,68.7 L390.8,67.5 L388.3,66.1 L385.9,64.6 L383.3,63.0 L380.8,61.3 L378.2,59.5 L375.5,57.6 L372.8,55.6 L370.1,53.5 L367.3,51.3 L364.5,49.1 L361.7,46.7 L358.8,44.2 L355.9,41.7 L353.0,39.1 L350.1,36.4 L347.1,33.6 L344.1,30.7 L341.1,27.8 L338.0,24.8 L335.0,21.7 L331.9,18.5 L328.8,15.3 L325.6,12.1 L322.5,8.8 L319.3,5.4 L316.2,2.0 L313.0,-1.5 L309.8,-5.0 L306.3,-8.3 L302.5,-11.5 L298.8,-14.6 L295.0,-17.8 L291.2,-21.1 L287.5,-24.4 L283.7,-27.7 L279.9,-31.0 L276.1,-34.3 L272.2,-37.6 L268.4,-41.0 L264.6,-44.3 L260.8,-47.7 L257.0,-51.0 L253.1,-54.4 L249.3,-57.7 L245.5,-61.1 L241.7,-64.4 L237.9,-67.6 L234.1,-70.9 L230.3,-74.1 L226.5,-77.3 L222.7,-80.5 L219.0,-83.6 L215.7,-87.2 L214.7,-86.2 L218.0,-82.7 L220.7,-78.6 L223.4,-74.6 L226.2,-70.5 L228.9,-66.3 L231.7,-62.2 L234.4,-58.0 L237.2,-53.8 L239.9,-49.6 L242.7,-45.3 L245.5,-41.1 L248.3,-36.8 L251.0,-32.6 L253.8,-28.3 L256.6,-24.0 L259.4,-19.8 L262.1,-15.5 L264.9,-11.3 L267.7,-7.1 L270.5,-2.8 L273.3,1.4 L276.0,5.6 L278.8,9.7 L281.6,13.9 L284.6,17.8 L287.9,21.4 L291.2,25.0 L294.5,28.5 L297.7,32.1 L301.0,35.5 L304.3,38.9 L307.5,42.3 L310.8,45.6 L314.0,48.9 L317.3,52.1 L320.5,55.2 L323.7,58.3 L326.9,61.3 L330.1,64.2 L333.3,67.1 L336.5,69.9 L339.7,72.6 L342.9,75.3 L346.1,77.9 L349.2,80.4 L352.4,82.8 L355.5,85.1 L358.7,87.3 L361.8,89.5 L364.9,91.6 L368.0,93.5 L371.2,95.4 L374.3,97.2 L377.4,98.9 L380.5,100.5 L383.6,101.9 L386.8,103.3 L389.9,104.6 L393.0,105.7 L396.1,106.7 L399.3,107.6 L402.4,108.4 L405.6,109.1 L408.7,109.6 L411.9,110.0 L415.0,110.3 L418.2,110.4 L421.3,110.3 L424.4,110.1 L427.5,109.8 L430.6,109.3 L433.6,108.6 L436.6,107.8 L439.6,106.8 L442.5,105.7 L445.3,104.5 L448.1,103.1 L450.7,101.5 L453.3,99.8 L455.9,98.1 L458.3,96.1 L460.7,94.1 L463.0,92.0 L465.2,89.8 L467.3,87.5 L469.3,85.0 L471.3,82.5 L473.2,80.0 L475.0,77.3 L476.7,74.6 L478.4,71.7 L480.0,68.9 L481.6,65.9 L483.1,62.9 L484.5,59.8 L485.8,56.6 L487.1,53.4 L488.4,50.1 L489.6,46.8 L490.7,43.4 L491.8,39.9 L492.8,36.4 L493.7,32.9 L494.7,29.3 L495.5,25.6 L496.3,22.0 L497.1,18.2 L497.8,14.5 L498.4,10.7 L499.0,6.8 L499.5,3.0 L500.0,-0.9 L500.5,-4.8 L500.9,-8.8 L501.2,-12.7 L501.5,-16.7 L501.7,-20.7 L501.9,-24.7 L502.0,-28.7 L502.1,-32.7 L502.2,-36.8 L502.1,-40.8 L502.1,-44.8 L502.0,-48.8 L501.8,-52.8 L501.6,-56.8 L501.3,-60.8 L501.0,-64.8 L500.6,-68.7 L500.2,-72.6 L499.7,-76.5 L499.2,-80.4 L498.6,-84.3 L498.0,-88.1 L497.3,-91.8 L496.5,-95.6 L495.8,-99.3 L494.9,-102.9 L494.0,-106.5 L493.1,-110.1 L492.1,-113.6 L491.0,-117.1 L489.9,-120.5 L488.7,-123.8 L487.5,-127.1 L486.2,-130.4 L484.9,-133.6 L483.5,-136.7 L482.0,-139.7 L480.5,-142.7 L478.9,-145.6 L477.2,-148.4 L475.5,-151.2 L473.7,-153.9 L471.8,-156.5 L469.9,-159.0 L467.9,-161.5 L465.8,-163.8 L463.6,-166.1 L461.3,-168.2 L459.0,-170.3 L456.6,-172.2 L454.1,-174.0 L451.5,-175.7 L448.8,-177.3 L446.1,-178.8 L443.3,-180.1 L440.4,-181.2 L437.5,-182.2 L434.5,-183.1 L431.5,-183.8 L428.4,-184.4 L425.3,-184.7 L422.2,-185.0 L419.1,-185.1 L415.9,-185.0 L412.8,-184.8 L409.6,-184.5 L406.5,-184.0 L403.3,-183.3 L400.2,-182.6 L397.1,-181.7 L393.9,-180.7 L390.8,-179.6 L387.7,-178.4 L384.5,-177.0 L381.4,-175.6 L378.3,-174.0 L375.2,-172.4 L372.1,-170.6 L369.0,-168.8 L365.8,-166.8 L362.7,-164.8 L359.6,-162.7 L356.4,-160.5 L353.3,-158.2 L350.1,-155.8 L347.0,-153.3 L343.8,-150.8 L340.6,-148.1 L337.5,-145.4 L334.3,-142.6 L331.1,-139.8 L327.9,-136.9 L324.7,-133.9 L321.4,-130.8 L318.2,-127.7 L315.0,-124.5 L311.7,-121.3 L308.5,-118.0 L305.2,-114.6 L302.0,-111.2 L298.7,-107.8 L295.4,-104.3 L292.1,-100.7 L288.9,-97.2 L285.6,-93.6 L282.3,-89.9 L279.0,-86.2 L275.7,-82.5 L272.4,-78.8 L269.1,-75.1 L265.8,-71.3 L262.4,-67.5 L259.1,-63.7 L255.8,-59.9 L252.5,-56.1 L249.2,-52.3 L245.9,-48.5 L242.6,-44.7 L239.3,-40.9 L236.1,-37.1 L232.8,-33.3 L229.5,-29.6 L226.2,-25.8 L223.0,-22.1 L219.7,-18.4 L216.5,-14.8 L213.3,-11.2 L210.0,-7.6 L206.8,-4.0 L203.6,-0.5 L200.5,2.9 L197.3,6.4 L194.1,9.7 L191.0,13.0 L187.9,16.3 L184.8,19.5 L181.7,22.6 L178.6,25.6 L175.6,28.6 L172.6,31.5 L169.6,34.4 L166.6,37.1 L163.7,39.8 L160.8,42.4 L157.9,44.9 L155.0,47.4 L152.2,49.7 L149.4,52.0 L146.7,54.1 L144.0,56.2 L141.3,58.2 L138.6,60.0 L136.0,61.8 L133.5,63.5 L131.0,65.0 L128.5,66.5 L126.1,67.8 L123.7,69.1 L121.4,70.2 L119.2,71.3 L117.0,72.2 L114.8,73.1 L112.8,73.8 L110.8,74.4 L108.8,75.0 L107.0,75.4 L105.2,75.8 L103.4,76.0 L101.7,76.2 L100.1,76.3 L98.6,76.4 L97.1,76.3 L95.7,76.2 L94.3,76.0 L92.9,75.8 L91.6,75.5 L90.3,75.1 L89.0,74.7 L87.8,74.2 L86.5,73.6 L85.3,73.0 L84.1,72.2 L82.9,71.4 L81.6,70.5 L80.4,69.5 L79.1,68.4 L77.9,67.3 L76.7,66.0 L75.4,64.6 L74.2,63.1 L73.0,61.5 L71.8,59.8 L70.6,58.0 L69.4,56.2 L68.2,54.2 L67.1,52.1 L66.0,49.9 L64.9,47.6 L63.8,45.3 L62.8,42.8 L61.8,40.3 L60.8,37.6 L59.9,34.9 L59.0,32.2 L58.1,29.3 L57.3,26.4 L56.5,23.4 L55.7,20.3 L55.0,17.2 L54.3,14.1 L53.7,10.8 L53.1,7.6 L52.5,4.3 L52.0,0.9 L51.6,-2.5 L51.1,-5.9 L50.8,-9.4 L50.4,-12.9 L50.2,-16.4 L49.9,-20.0 L49.7,-23.5 L49.6,-27.1 L49.5,-30.7 L49.4,-34.3 L49.4,-37.9 L49.4,-41.5 L49.5,-45.0 L49.6,-48.6 L49.8,-52.2 L50.0,-55.7 L50.2,-59.3 L50.5,-62.8 L50.9,-66.3 L51.3,-69.7 L51.7,-73.2 L52.2,-76.6 L52.7,-79.9 L53.3,-83.2 L53.9,-86.5 L54.5,-89.7 L55.2,-92.8 L55.9,-95.9 L56.7,-99.0 L57.5,-101.9 L58.3,-104.8 L59.2,-107.7 L60.1,-110.4 L61.1,-113.1 L62.1,-115.7 L63.1,-118.2 L64.1,-120.6 L65.2,-123.0 L66.3,-125.2 L67.4,-127.4 L68.6,-129.4 L69.7,-131.4 L70.9,-133.3 L72.1,-135.0 L73.3,-136.7 L74.6,-138.2 L75.8,-139.7 L77.0,-141.0 L78.3,-142.3 L79.5,-143.5 L80.7,-144.5 L82.2,-145.6 L83.6,-146.7 L85.2,-147.6 L87.2,-149.1 L89.4,-150.5 L91.6,-151.9 L93.7,-153.0 L95.8,-154.0 L97.9,-155.0 L100.1,-155.8 L102.3,-156.6 L104.6,-157.3 L106.8,-157.9 L109.1,-158.4 L111.4,-158.8 L113.7,-159.1 L116.0,-159.3 L118.4,-159.4 L120.7,-159.7 L123.1,-159.9 L125.5,-160.0 L127.9,-160.0 L130.2,-159.9 L132.6,-159.7 L135.0,-159.3 L137.4,-158.9 L139.8,-158.4 L142.2,-157.8 L144.5,-157.1 L146.9,-156.3 L149.4,-155.3 L151.9,-154.1 L154.4,-152.9 Z"/></g><g mask="url(#lg-m2)"><path class="lg-ink" d="M533 713 647 698 651 316C653 135 586 62 470 62C355 62 295 129 295 312V406L296 704L392 713V747H36V713L122 705C125 605 125 504 125 406V297C125 61 245 -20 417 -20C595 -20 692 84 695 314L699 698L802 713V747H533Z" transform="translate(-2.90 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M605 -2H693V699L792 713V747H514V713L649 699V478L653 219L287 747H41V713L117 705L133 681V49L35 34V0H312V34L185 48V230L174 621Z" transform="translate(74.21 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M41 713 131 705C134 602 134 499 134 395V351C134 247 134 144 131 43L41 34V0H395V34L306 43C304 146 304 249 304 352V395C304 499 304 603 306 705L395 713V747H41Z" transform="translate(152.29 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M494 716 601 701 429 162 252 704 360 716V747H6V713L70 707L320 -2H412L659 703L740 717V747H494Z" transform="translate(191.86 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M554 548H612L613 747H41V713L131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H634L632 207H576L530 39H305C303 143 303 249 303 360V363H440L454 263H504V505H454L439 399H303C303 505 303 608 305 708H510Z" transform="translate(261.30 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M41 713 131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H395V34L303 43C300 145 300 248 300 353H348C425 353 449 313 463 231L492 93C502 12 553 -15 645 -15C695 -15 723 -10 764 0V34L675 40L644 204C627 303 591 359 460 376C618 400 673 477 673 559C673 678 577 747 402 747H41ZM303 709H359C460 709 513 655 513 556C513 465 470 390 358 390H300C300 505 300 608 303 709Z" transform="translate(323.64 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M284 -20C472 -20 574 71 574 204C574 317 519 377 369 444L317 468C246 500 208 537 208 606C208 681 266 725 353 725C378 725 398 722 418 713L469 546H527L535 710C482 746 411 767 332 767C169 767 59 690 59 555C59 435 130 368 264 307L312 286C392 250 420 215 420 148C420 70 366 23 267 23C229 23 199 27 169 38L116 212H58L51 40C111 1 202 -20 284 -20Z" transform="translate(395.81 0) scale(0.1000 -0.1000)"/><path class="lg-ink" d="M554 548H612L613 747H41V713L131 705C133 602 133 499 133 395V351C133 247 133 144 131 43L41 34V0H634L632 207H576L530 39H305C303 143 303 249 303 360V363H440L454 263H504V505H454L439 399H303C303 505 303 608 305 708H510Z" transform="translate(452.50 0) scale(0.1000 -0.1000)"/></g><g mask="url(#lg-m3)"><path class="lg-snake" d="M212.3,39.9 L215.6,36.5 L218.9,33.1 L222.1,29.6 L225.4,26.0 L228.7,22.5 L232.0,18.8 L235.3,15.2 L238.6,11.5 L241.9,7.8 L245.2,4.1 L248.5,0.3 L251.8,-3.4 L255.1,-7.2 L258.4,-11.0 L261.7,-14.8 L265.0,-18.6 L268.3,-22.4 L271.6,-26.2 L274.9,-30.0 L278.2,-33.8 L281.5,-37.6 L284.8,-41.4 L288.1,-45.1 L291.3,-48.9 L294.6,-52.6 L297.8,-56.3 L301.1,-59.9 L304.3,-63.6 L307.5,-67.1 L310.7,-70.7 L313.9,-74.2 L317.1,-77.7 L320.3,-81.1 L323.4,-84.4 L326.6,-87.7 L329.7,-91.0 L305.2,-114.6 L302.0,-111.2 L298.7,-107.8 L295.4,-104.3 L292.1,-100.7 L288.9,-97.2 L285.6,-93.6 L282.3,-89.9 L279.0,-86.2 L275.7,-82.5 L272.4,-78.8 L269.1,-75.1 L265.8,-71.3 L262.4,-67.5 L259.1,-63.7 L255.8,-59.9 L252.5,-56.1 L249.2,-52.3 L245.9,-48.5 L242.6,-44.7 L239.3,-40.9 L236.1,-37.1 L232.8,-33.3 L229.5,-29.6 L226.2,-25.8 L223.0,-22.1 L219.7,-18.4 L216.5,-14.8 L213.3,-11.2 L210.0,-7.6 L206.8,-4.0 L203.6,-0.5 L200.5,2.9 L197.3,6.4 L194.1,9.7 L191.0,13.0 L187.9,16.3 Z"/></g><path class="lg-snake" d="M328.8,15.3 L325.6,12.1 L322.5,8.8 L319.3,5.4 L316.2,2.0 L313.0,-1.5 L309.8,-5.0 L306.3,-8.3 L302.5,-11.5 L298.8,-14.6 L295.0,-17.8 L291.2,-21.1 L287.5,-24.4 L283.7,-27.7 L279.9,-31.0 L276.1,-34.3 L272.2,-37.6 L268.4,-41.0 L264.6,-44.3 L260.8,-47.7 L257.0,-51.0 L253.1,-54.4 L249.3,-57.7 L245.5,-61.1 L241.7,-64.4 L237.9,-67.6 L234.1,-70.9 L230.3,-74.1 L226.5,-77.3 L222.7,-80.5 L219.0,-83.6 L215.7,-87.2 L214.7,-86.2 L218.0,-82.7 L220.7,-78.6 L223.4,-74.6 L226.2,-70.5 L228.9,-66.3 L231.7,-62.2 L234.4,-58.0 L237.2,-53.8 L239.9,-49.6 L242.7,-45.3 L245.5,-41.1 L248.3,-36.8 L251.0,-32.6 L253.8,-28.3 L256.6,-24.0 L259.4,-19.8 L262.1,-15.5 L264.9,-11.3 L267.7,-7.1 L270.5,-2.8 L273.3,1.4 L276.0,5.6 L278.8,9.7 L281.6,13.9 L284.6,17.8 L287.9,21.4 L291.2,25.0 L294.5,28.5 L297.7,32.1 L301.0,35.5 L304.3,38.9 Z"/><g mask="url(#lg-m4)"><g transform="translate(160.92 -164.42) rotate(26.0)"><path class="lg-line" d="M42.16,0.00 L57.97,0.00 M57.97,0.00 L68.51,-6.96 M57.97,0.00 L68.51,6.96" stroke-width="3.37" stroke-linecap="round"/><path class="lg-snake" d="M-21.08,-10.54 C-12.65,-13.07 -5.27,-22.13 7.38,-21.08 C21.08,-18.97 36.89,-8.43 45.32,0.00 C36.89,8.43 21.08,18.97 7.38,21.08 C-5.27,22.13 -12.65,13.07 -21.08,10.54 Z"/></g></g><path class="lg-snake" d="M174.1,-128.5 C176.6,-110.0 178.1,-108.5 196.6,-106.1 C178.1,-103.6 176.6,-102.1 174.1,-83.7 C171.7,-102.1 170.2,-103.6 151.7,-106.1 C170.2,-108.5 171.7,-110.0 174.1,-128.5 Z"/></symbol></svg>
@@ -444,6 +460,8 @@ body.tone-east .profile.over, body.tone-west .profile.over { --ring: var(--surfa
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#home" data-go="home"><svg class="nav-logo" viewBox="0 0 529 346" role="img" aria-label="UNIVERSE"><use href="#lg"/></svg><span class="brand-home">首页</span></a>
+    <!-- 中英文切换按钮。显示的是"另一种语言"的名字 -->
+    <button class="lang-btn" id="lang-btn" type="button" aria-label="Language" data-keep>EN</button>
     <nav class="nav" id="nav" aria-label="账号"></nav>
   </div>
 </header>
@@ -685,6 +703,522 @@ function coverCss(cover) { return COVERS[cover] ? `background:${COVERS[cover]}` 
 const pick = obj => { const k = Object.keys(obj); return k[Math.floor(Math.random() * k.length)]; };
 
 /* ============================================================
+   英文对照表。左边是网站上的中文，右边是英文。
+   网站默认显示中文。切到英文时，页面上的每一句中文都会来这里找对应的英文。
+   · 想改某句英文：改右边。
+   · 改了某句中文（在上面的数据或下面的页面里）：这里左边也要改成一模一样的字，
+     包括标点。不然这句话在英文版里会继续显示中文。
+   · 新加了一句中文：在这里加一行。
+   ============================================================ */
+const EN = {
+  // ---- 顶部和页脚 ----
+  "首页": "Home",
+  "成为引路人": "Become a Guide",
+  "登录": "Log in",
+  "注册": "Sign up",
+  "我的": "Account",
+  "问路": "Seek",
+  "引路": "Guide",
+  "用户协议": "Terms of Service",
+  "隐私政策": "Privacy Policy",
+  "账号": "Account",
+  "切换身份": "Switch role",
+  "← 返回": "← Back",
+  // ---- 首页 ----
+  "问路的人，和引路的人，在这里相遇。": "Those who seek and those who guide meet here.",
+  "愿你在这里找到答案。": "May you find your answer here.",
+  "东玄": "Eastern Arts",
+  "西玄": "Western Arts",
+  "搜索门类或引路人，例如：塔罗、林见月": "Search a practice or a guide, e.g. Tarot, Lin Jianyue",
+  "搜索": "Search",
+  "门类": "Practice",
+  "引路人": "Guide",
+  "没有找到。换一个词试试。": "Nothing found. Try another word.",
+  "不了解这些？没关系。": "New to all this? That is fine.",
+  "说说你最近的经历或困惑。我们会为你推荐合适的方向。": "Tell us what has been on your mind. We will suggest where to start.",
+  "为我推荐": "Suggest for me",
+  "该内容只用于推荐，不会公开。": "This is used only for the suggestion. It is never made public.",
+  "例如：最近在考虑换工作，但一直拿不定主意……": "e.g. I am thinking about changing jobs, but I cannot decide...",
+  "你的经历或困惑": "What is on your mind",
+  "每位引路人都由平台邀请或审核入驻。": "Every guide is invited or reviewed by the platform.",
+  "当前内容为示例数据，引路人均为虚构人物。": "All content is sample data. The guides are fictional.",
+  "可以先从这几个方向看看：": "You could start with these:",
+  "原型阶段：这里按关键词做简单推荐。正式版会结合更多信息。": "Prototype: suggestions use simple keyword matching. The full version will use more information.",
+  "和感情、关系有关的问题": "love and relationships",
+  "和事业、选择有关的问题": "career and decisions",
+  "和情绪、身心状态有关的问题": "emotions and wellbeing",
+  "想更了解自己、看清方向": "knowing yourself and finding direction",
+  "和居住、空间有关的问题": "home and space",
+  "想入门学习": "learning the basics",
+  "谢谢你愿意说出来。你现在一定很难受。": "Thank you for telling us. You must be in a lot of pain right now.",
+  "我们希望你平安。请先不要伤害自己，也不要一个人扛着。你并不孤单，帮助是存在的。": "We want you to be safe. Please do not hurt yourself, and please do not carry this alone. You are not alone, and help is available.",
+  "请现在就联系能帮到你的人：": "Please reach out now to someone who can help:",
+  "有生命危险时，请立即拨打当地的急救电话。": "If your life is in danger, call your local emergency number now.",
+  "中国大陆：急救电话": "Mainland China: emergency",
+  "，心理援助热线": ", mental health helpline",
+  "澳大利亚：急救电话": "Australia: emergency",
+  "，Lifeline 危机热线": ", Lifeline crisis line",
+  "其他地区：在": "Elsewhere: visit",
+  "可以查到当地的热线": "to find a local helpline",
+  "也请告诉一位你信任的人，请他陪着你。": "Please also tell someone you trust, and ask them to stay with you.",
+  "平台上的咨询不能替代专业的危机援助。": "Sessions on this platform cannot replace professional crisis support.",
+  "即将开放": "Coming soon",
+  "这个门类还没有引路人入驻。": "No guides have joined this practice yet.",
+  // ---- 门类：名字和介绍 ----
+  "源自中国的传统术数。从出生时间、卦象和方位里，读出一个人的格局与时机。": "Traditional Chinese arts. They read a person's pattern and timing from birth time, hexagrams and direction.",
+  "源自西方的神秘学传统，以及当代的身心练习。借助星盘、牌卡和仪式，看清处境与内心。": "Western esoteric traditions and modern mind-body practices. Charts, cards and rituals help you see your situation and yourself.",
+  "八字": "BaZi",
+  "用出生的年、月、日、时排出命盘，看性格底色和人生的大致走势。": "A chart built from your birth year, month, day and hour. It shows your basic nature and the broad course of your life.",
+  "紫微斗数": "Zi Wei Dou Shu",
+  "看星曜落在十二宫的位置，细读事业、感情、财运等各个方面。": "Reads where the stars fall in twelve palaces, for a close look at career, love, money and more.",
+  "奇门遁甲": "Qi Men Dun Jia",
+  "以时间和方位起局，多用于具体事情的决策和择时。": "A chart cast from time and direction. Often used for decisions and timing on a specific matter.",
+  "易经风水": "Feng Shui",
+  "从易经的道理出发，调整居住和工作空间的布局。": "Arranges living and working spaces, based on the principles of the I Ching.",
+  "梅花易数": "Plum Blossom Numerology",
+  "从眼前的数字、声音、景象起卦，灵活而快速。": "Casts a hexagram from numbers, sounds and sights around you. Flexible and fast.",
+  "六爻": "Liu Yao",
+  "用三枚铜钱摇出卦象，针对一件具体的事，问它的走向。": "Three coins are tossed to form a hexagram. You ask where one specific matter is heading.",
+  "占星": "Astrology",
+  "通过星盘了解性格、关系和人生阶段。": "Understand character, relationships and life stages through your birth chart.",
+  "塔罗": "Tarot",
+  "借助牌阵看清当下的处境和选择。": "Card spreads that help you see your present situation and choices.",
+  "雷诺曼": "Lenormand",
+  "三十六张牌，画面直白。适合问具体、贴近日常的问题。": "Thirty-six cards with direct images. Good for concrete, everyday questions.",
+  "卢恩符文": "Runes",
+  "古代北欧的字母符号。抽取符文，得到简短有力的指引。": "Ancient Nordic letters. Draw runes for short, strong guidance.",
+  "魔法蜡烛": "Candle Magic",
+  "用不同颜色的蜡烛配合意念，为一个心愿聚焦和祈愿。": "Coloured candles and intention, used to focus on one wish.",
+  "仪式": "Ritual",
+  "借助固定的步骤和象征物，标记一次开始、告别或转变。": "Set steps and symbols that mark a beginning, a farewell or a change.",
+  "冥想": "Meditation",
+  "学习安住当下，和自己的念头相处。": "Learn to stay in the present and live with your own thoughts.",
+  "能量疗愈": "Energy Healing",
+  "通过身体和能量工作，释放长期的紧绷。": "Body and energy work that releases long-held tension.",
+  // ---- 引路人：名字、简介、介绍、资历 ----
+  "林见月": "Lin Jianyue",
+  "执业九年的占星师，也读塔罗": "Astrologer for nine years, also reads tarot",
+  "林见月从 2017 年开始全职做占星咨询。她习惯先听来访者把话说完，再打开星盘。": "Lin Jianyue has been a full-time astrologer since 2017. She lets clients finish speaking before she opens the chart.",
+  "九年个案咨询经验": "Nine years of one-to-one sessions",
+  "完成三年制占星系统课程": "Completed a three-year astrology programme",
+  "长期带领占星读书小组": "Leads a long-running astrology reading group",
+  "周若水": "Zhou Ruoshui",
+  "塔罗师，冥想带领者，也读雷诺曼": "Tarot reader and meditation leader, also reads Lenormand",
+  "周若水相信塔罗是一面镜子。她的解读节奏很慢，会留时间让您自己说出答案。": "Zhou Ruoshui believes tarot is a mirror. Her readings are slow, and she leaves time for you to say the answer yourself.",
+  "六年塔罗解读经验": "Six years of tarot readings",
+  "正念冥想带领人培训结业": "Completed mindfulness meditation leader training",
+  "苏原": "Su Yuan",
+  "冥想老师，做能量疗愈十二年": "Meditation teacher, twelve years in energy healing",
+  "苏原早年在寺院短期修习，后来把冥想带到日常生活里。他的课不讲玄的，只练能用的。": "Su Yuan trained for a short time in a monastery, then brought meditation into daily life. His classes skip the mystical and practise what is useful.",
+  "十二年教学经验": "Twelve years of teaching",
+  "带领过两百多场线下共修": "Has led over two hundred in-person group sittings",
+  "何星野": "He Xingye",
+  "占星与紫微斗数，专注教学": "Astrology and Zi Wei Dou Shu, focused on teaching",
+  "何星野更喜欢教人自己看盘。他先学紫微斗数，后来转向西方占星，现在两边都教。": "He Xingye prefers to teach people to read their own charts. He learned Zi Wei Dou Shu first, then Western astrology, and now teaches both.",
+  "七年占星教学经验": "Seven years of teaching astrology",
+  "编写过入门到进阶的整套讲义": "Wrote a full set of course notes, from beginner to advanced",
+  "唐一禾": "Tang Yihe",
+  "能量疗愈师，兼做塔罗": "Energy healer, also reads tarot",
+  "唐一禾原本是瑜伽老师。她从身体入手，再谈情绪和选择。": "Tang Yihe was a yoga teacher. She starts with the body, then talks about feelings and choices.",
+  "八年身体工作经验": "Eight years of bodywork",
+  "四年塔罗解读经验": "Four years of tarot readings",
+  "叶霜": "Ye Shuang",
+  "卢恩符文与仪式工作者": "Rune reader and ritual worker",
+  "叶霜在北欧生活过四年，从那里开始学卢恩符文。她做仪式很朴素，重点放在您自己的意图上。": "Ye Shuang lived in the Nordic region for four years and began learning runes there. Her rituals are simple, and the focus is on your own intention.",
+  "六年卢恩符文解读经验": "Six years of rune readings",
+  "带领过季节仪式和蜡烛工作坊": "Has led seasonal rituals and candle workshops",
+  "沈青岚": "Shen Qinglan",
+  "八字命理师，执业十四年": "BaZi consultant for fourteen years",
+  "沈青岚出身中医家庭，从小接触干支和五行。她看八字不下断语，只讲格局、时机和可以做的选择。": "Shen Qinglan grew up in a family of Chinese medicine doctors and learned the stems, branches and five elements early. She does not make fixed predictions. She talks about pattern, timing and the choices you can make.",
+  "十四年八字咨询经验": "Fourteen years of BaZi consultations",
+  "系统学习子平命理": "Formal study of the Zi Ping method",
+  "开设八字入门课六期": "Has run six rounds of a BaZi beginner course",
+  "顾怀谷": "Gu Huaigu",
+  "奇门遁甲与六爻": "Qi Men Dun Jia and Liu Yao",
+  "顾怀谷做了十年工程师，后来专心研究术数。他起局很快，解释很慢，会把每一步推理讲给您听。": "Gu Huaigu was an engineer for ten years before he turned fully to these arts. He casts a chart quickly and explains slowly, and he walks you through every step of his reasoning.",
+  "九年奇门遁甲实践": "Nine years of Qi Men Dun Jia practice",
+  "六年六爻占卜经验": "Six years of Liu Yao divination",
+  "陆知微": "Lu Zhiwei",
+  "风水顾问，也用梅花易数": "Feng shui consultant, also uses Plum Blossom Numerology",
+  "陆知微学建筑出身。她看风水先看采光、动线和居住的人，再谈方位。": "Lu Zhiwei trained as an architect. She looks at light, movement and the people who live there first, and direction second.",
+  "建筑设计背景": "Background in architectural design",
+  "十一年住宅与办公空间风水经验": "Eleven years of feng shui for homes and offices",
+  "江晚舟": "Jiang Wanzhou",
+  "紫微斗数与梅花易数": "Zi Wei Dou Shu and Plum Blossom Numerology",
+  "江晚舟教过八年语文。她擅长把命盘里的术语换成日常的话，适合第一次接触的人。": "Jiang Wanzhou taught Chinese literature for eight years. She is good at turning chart terms into everyday words, which suits first-timers.",
+  "八年紫微斗数解盘经验": "Eight years of Zi Wei Dou Shu chart readings",
+  "梅花易数线上课主讲": "Lead teacher of an online Plum Blossom course",
+  // ---- 业务：简介和服务项目 ----
+  "本命盘解读和年度运势，适合想系统了解自己的人。": "Birth chart readings and yearly forecasts, for people who want to understand themselves in depth.",
+  "本命盘一对一解读": "One-to-one birth chart reading",
+  "年度流年咨询": "Yearly forecast session",
+  "关系合盘": "Relationship chart (synastry)",
+  "针对一个具体问题的塔罗解读，一次讲清楚。": "A tarot reading for one specific question, made clear in one session.",
+  "单一问题解读": "Single-question reading",
+  "三个月走向牌阵": "Three-month outlook spread",
+  "慢节奏的深度解读，也开塔罗入门课。": "Slow, in-depth readings. She also runs a beginner tarot course.",
+  "深度个案解读": "In-depth reading",
+  "塔罗入门八周课": "Eight-week beginner tarot course",
+  "雷诺曼适合问具体的事。答案直接，细节多。": "Lenormand suits concrete questions. The answers are direct and detailed.",
+  "九宫格牌阵解读": "Nine-card spread reading",
+  "大桌牌阵全盘解读": "Grand Tableau full reading",
+  "给初学者的正念练习，每次带一个小主题。": "Mindfulness practice for beginners, with one small theme each time.",
+  "一对一冥想引导": "One-to-one guided meditation",
+  "每周线上共修": "Weekly online group sitting",
+  "从十分钟开始，建立能坚持的日常练习。": "Start with ten minutes and build a daily practice you can keep.",
+  "日常练习陪伴计划": "Daily practice support plan",
+  "周末止语工作坊": "Weekend silent workshop",
+  "结合呼吸和静坐的能量调理。": "Energy balancing that combines breathing and sitting.",
+  "一对一能量调理": "One-to-one energy balancing",
+  "呼吸疗愈小组": "Breathwork healing group",
+  "教您自己看懂星盘，从零开始。": "Learn to read your own chart, starting from zero.",
+  "占星入门十二讲": "Astrology basics in twelve lessons",
+  "进阶：行运与推运": "Advanced: transits and progressions",
+  "学员看盘答疑": "Chart Q&A for students",
+  "从身体入手，放松长期的紧绷和疲惫。": "Starts with the body, to release long-held tension and tiredness.",
+  "身体扫描与释放": "Body scan and release",
+  "女性能量工作坊": "Women's energy workshop",
+  "把塔罗和身体感受结合起来的解读。": "Readings that combine tarot with what you feel in your body.",
+  "身心塔罗解读": "Mind-body tarot reading",
+  "用卢恩符文看当下的处境和下一步。": "Runes for your present situation and your next step.",
+  "三符文解读": "Three-rune reading",
+  "个人守护符文": "Personal guardian rune",
+  "为一个明确的心愿设计蜡烛仪式，您自己在家完成。": "A candle ritual designed for one clear wish, which you carry out at home.",
+  "心愿蜡烛定制指引": "Custom wish-candle guide",
+  "蜡烛燃烧解读": "Candle burn reading",
+  "新月、满月和节气的小型仪式，线上带领。": "Small rituals for new moons, full moons and seasonal turning points, led online.",
+  "新月许愿仪式": "New moon wish ritual",
+  "告别与放下仪式": "Farewell and letting-go ritual",
+  "完整的八字解读，重点讲性格、时机和选择。": "A full BaZi reading, with a focus on character, timing and choices.",
+  "本命八字详解": "Full BaZi chart reading",
+  "流年运势咨询": "Yearly fortune session",
+  "八字入门课": "BaZi beginner course",
+  "用日常的话讲八字，适合第一次看的人。": "BaZi explained in everyday words. Good for a first reading.",
+  "八字初次解读": "First BaZi reading",
+  "紫微斗数全盘解读，十二宫逐一讲明白。": "A full Zi Wei Dou Shu reading. Each of the twelve palaces is explained.",
+  "命盘全盘解读": "Full chart reading",
+  "十年大限分析": "Ten-year cycle analysis",
+  "教您自己排盘和读盘，可以和占星对照着学。": "Learn to cast and read your own chart. You can study it side by side with astrology.",
+  "紫微斗数入门十讲": "Zi Wei Dou Shu basics in ten lessons",
+  "针对一件具体的事起局，看时机和方向。": "A chart cast for one specific matter, to see timing and direction.",
+  "单事奇门起局": "Single-matter Qi Men chart",
+  "事业决策咨询": "Career decision session",
+  "一事一占，推理过程全部讲给您听。": "One question, one casting. The full reasoning is explained to you.",
+  "单一问题占卜": "Single-question divination",
+  "六爻基础课": "Liu Yao foundation course",
+  "配合八字使用的六爻占问，适合短期的事。": "Liu Yao questions used alongside BaZi. Good for short-term matters.",
+  "住宅和办公空间的风水建议，先看人怎么住。": "Feng shui advice for homes and offices. It starts with how people live there.",
+  "户型图线上分析": "Online floor plan analysis",
+  "搬家与布置建议": "Moving and layout advice",
+  "办公室座位调整": "Office seating adjustment",
+  "用梅花易数看眼前的小事，起卦快，答案简洁。": "Plum Blossom Numerology for small, present matters. Quick to cast, simple answers.",
+  "随事起卦解读": "On-the-spot hexagram reading",
+  "线上小班，学会自己起卦。": "A small online class. Learn to cast a hexagram yourself.",
+  "梅花易数入门课": "Plum Blossom beginner course",
+  // ---- 业务页和引路人主页 ----
+  "提供的服务": "Services offered",
+  "联系这位引路人": "Contact this guide",
+  "向引路人发起联系": "Contact the guide",
+  "收藏": "Save",
+  "已收藏": "Saved",
+  "联系和收藏需要先登录。": "Log in to contact or save.",
+  "请通过平台提供的渠道与引路人沟通。私下交换联系方式或在平台之外交易的，平台无法提供保障。": "Please talk to guides through the platform. If you exchange contact details privately or pay outside the platform, we cannot protect you.",
+  "联系功能还没有接通。这里以后会打开联系表单。": "Contact is not connected yet. A contact form will open here later.",
+  "关于这位引路人": "About this guide",
+  "资历": "Experience",
+  "涉及的领域": "Practices",
+  // ---- 登录和注册 ----
+  "欢迎回来": "Welcome back",
+  "账户名、手机号或邮箱": "Username, phone or email",
+  "密码": "Password",
+  "手机号或邮箱": "Phone or email",
+  "验证码": "Verification code",
+  "发送验证码": "Send code",
+  "原型阶段：验证码还没有接通。随便填几位数字就能登录。": "Prototype: codes are not connected yet. Enter any digits to log in.",
+  "改用验证码登录": "Log in with a code instead",
+  "改用密码登录": "Log in with a password instead",
+  "还没有账号？": "No account yet? ",
+  "注册一个": "Sign up",
+  "登录即表示您同意": "By logging in, you agree to the ",
+  "《用户协议》": "Terms of Service",
+  "和": " and ",
+  "《隐私政策》": "Privacy Policy",
+  "测试账号，只在原型阶段使用。点一下直接登录。": "Test accounts, for the prototype only. Click one to log in.",
+  "问路人账号": "Seeker account",
+  "引路人账号": "Guide account",
+  "也可以手动输入账户名 xueyuan 或 daoshi，密码随便填。填其他账户名会当作问路人账号。": "You can also type the username xueyuan or daoshi with any password. Any other username is treated as a seeker account.",
+  "你来了": "You are here",
+  "我们一直在等你。": "We have been waiting for you.",
+  "想让我们怎么称呼你？": "What should we call you?",
+  "你的专属账户名": "Your username",
+  "设置你的密码": "Set your password",
+  "密保手机号或邮箱（选填）": "Recovery phone or email (optional)",
+  "密保手机号或邮箱": "Recovery phone or email",
+  "可以以后再加。忘记账户名或密码时，用它来找回。": "You can add it later. It is used to recover your username or password.",
+  "本平台尊重用户隐私。注册信息仅用于提供平台服务，不会出售给第三方。": "We respect your privacy. Your sign-up details are used only to provide the service and are never sold to third parties.",
+  "我已年满 18 周岁，并已阅读和同意": "I am 18 or older, and I have read and agree to the ",
+  "已经有账号？": "Already have an account? ",
+  "去登录": "Log in",
+  "想成为引路人？": "Want to become a guide? ",
+  "了解平台认证": "Learn about certification",
+  "原型阶段：不会真的创建账号，刷新页面后需要重新登录。": "Prototype: no real account is created. You will need to log in again after a refresh.",
+  "测试问路人": "Test Seeker",
+  "测试引路人": "Test Guide",
+  // ---- 我的 ----
+  "我的收藏": "Saved",
+  "退出登录": "Log out",
+  "申请已提交": "Application submitted",
+  "平台正在审核您的引路人申请。通过后会通知您。": "We are reviewing your guide application. We will tell you when it is approved.",
+  "原型专用：模拟审核通过": "Prototype only: simulate approval",
+  "还没有收藏。在引路人的业务页点\"收藏\"，会出现在这里。": "Nothing saved yet. Click \"Save\" on a guide's service page and it will appear here.",
+  "您的账号已经通过引路人认证。右上角可以在问路和引路之间切换。": "Your account is certified as a guide. Use the switch at the top right to move between Seek and Guide.",
+  "进入引路人工作台": "Open Guide Studio",
+  // ---- 成为引路人和申请 ----
+  "你走过的路，可能正是别人在找的方向。": "The road you have walked may be the direction someone else is looking for.",
+  "我们在找这样的人": "Who we are looking for",
+  "在某个门类有扎实的积累和实际经验。": "Solid knowledge and real experience in a practice.",
+  "愿意认真倾听。不夸大，不恐吓。": "Willing to listen carefully. No exaggeration, no scare tactics.",
+  "尊重来访者的选择和隐私。": "Respect for each client's choices and privacy.",
+  "认证的两种方式": "Two ways to be certified",
+  "受邀：凭平台发出的邀请码，直接通过认证。": "By invitation: an invite code from the platform certifies you at once.",
+  "申请：提交擅长方向、从业时间、案例和学习记录，由平台人工审核。": "By application: submit your practices, years of experience, cases and study records for manual review.",
+  "审核看什么": "What we look at",
+  "经验是否真实。": "Whether the experience is real.",
+  "表达是否清楚、负责。": "Whether you speak clearly and responsibly.",
+  "是否理解并接受平台的行为规范。": "Whether you understand and accept the platform's code of conduct.",
+  "认证之后": "After certification",
+  "账号还是同一个，只是多了引路人的身份。": "It is still the same account, with the guide role added.",
+  "可以随时在问路和引路之间切换。今天引路，明天也可以问路。": "You can switch between Seek and Guide at any time. Guide today, seek tomorrow.",
+  "准备好了？现在就申请吧。": "Ready? Apply now.",
+  "申请成为引路人": "Apply to become a guide",
+  "先登录": "Log in first",
+  "，再申请。": ", then apply.",
+  "每位引路人都需要通过平台认证。": "Every guide must be certified by the platform.",
+  "用来通知审核结果，也用来找回账号。": "Used to send the review result and to recover your account.",
+  "你是否收到了平台的邀请？": "Did you receive an invitation from the platform?",
+  "是，我有邀请码": "Yes, I have an invite code",
+  "不是": "No",
+  "邀请码": "Invite code",
+  "验证并完成认证": "Verify and complete certification",
+  "原型专用邀请码：DEMO2026": "Prototype invite code: DEMO2026",
+  "擅长方向（可多选）": "Your practices (choose any)",
+  "从业时间": "Years of experience",
+  "请选择": "Please choose",
+  "1 年以内": "Under 1 year",
+  "1 到 3 年": "1 to 3 years",
+  "3 到 5 年": "3 to 5 years",
+  "5 到 10 年": "5 to 10 years",
+  "10 年以上": "Over 10 years",
+  "案例截图或记录": "Case screenshots or records",
+  "上传前请遮住来访者的姓名、头像和联系方式。": "Before uploading, please hide each client's name, photo and contact details.",
+  "课程学习记录": "Course and study records",
+  "证书": "Certificates",
+  "自我介绍": "About you",
+  "提交申请": "Submit application",
+  "你的申请已提交，平台正在审核。": "Your application is submitted and under review.",
+  "你的账号已经通过认证。": "Your account is already certified.",
+  "邀请码不正确。请检查后再试，或联系平台。": "That invite code is not correct. Please check it and try again, or contact the platform.",
+  "请至少选择一个擅长方向。": "Please choose at least one practice.",
+  // ---- 引路人工作台 ----
+  "引路人工作台": "Guide Studio",
+  "概览": "Overview",
+  "我的主页": "My profile",
+  "我的业务": "My services",
+  "联系请求": "Requests",
+  "工作台栏目": "Studio sections",
+  "已认证引路人": "Certified guide",
+  "新的联系请求": "New requests",
+  "上线中的业务": "Live services",
+  "被收藏次数": "Times saved",
+  "本周主页浏览": "Profile views this week",
+  "后两个数字是示例。接入后台后会显示真实数据。": "The last two numbers are samples. Real data will show once the backend is connected.",
+  "资料已经完整。问路人能在门类页里看到你。": "Your profile is complete. Seekers can find you on the practice pages.",
+  "资料完整之后，问路人才能在门类页里看到你。": "Seekers can find you on the practice pages once your profile is complete.",
+  "写一句话简介": "Write a one-line tagline",
+  "写自我介绍": "Write your introduction",
+  "填写资历": "Add your experience",
+  "添加至少一项业务": "Add at least one service",
+  "下面就是问路人看到的主页头部。点头像可以换头像，背景右上角可以换背景。": "This is the profile header seekers see. Click the photo to change it. Change the cover from its top right corner.",
+  "上传背景": "Upload cover",
+  "随机背景": "Random cover",
+  "随机头像": "Random photo",
+  "更换头像": "Change photo",
+  "还没有写一句话简介": "No tagline yet",
+  "称呼": "Display name",
+  "一句话简介": "Tagline",
+  "资历和经验（每行一条）": "Experience (one per line)",
+  "保存": "Save",
+  "已保存。原型阶段：刷新页面后会重置。": "Saved. Prototype: this resets when the page is refreshed.",
+  "例如：塔罗师，冥想带领者": "e.g. Tarot reader and meditation leader",
+  "你是谁，怎样开始做这件事，你的方式是什么样的。": "Who you are, how you started, and how you work.",
+  "例如：六年塔罗解读经验": "e.g. Six years of tarot readings",
+  "塔罗与占星，执业五年": "Tarot and astrology, five years in practice",
+  "这是一段示例介绍。我习惯先听对方把话说完，再开始解读。": "This is a sample introduction. I let people finish speaking before I begin a reading.",
+  "五年个案咨询经验": "Five years of one-to-one sessions",
+  "完成两年制占星课程": "Completed a two-year astrology course",
+  "一个门类是一项业务。上线中的业务会出现在对应的门类页里。": "One practice is one service. Live services appear on the matching practice page.",
+  "上线中": "Live",
+  "已暂停": "Paused",
+  "暂停": "Pause",
+  "上线": "Go live",
+  "编辑": "Edit",
+  "删除": "Delete",
+  "取消": "Cancel",
+  "针对一个具体问题的解读，一次讲清楚。": "A reading for one specific question, made clear in one session.",
+  "本命盘解读，适合想系统了解自己的人。": "Birth chart readings, for people who want to understand themselves in depth.",
+  "添加业务": "Add a service",
+  "一两句话介绍": "Short description",
+  "提供的服务（每行一项）": "Services offered (one per line)",
+  "保存业务": "Save service",
+  "还没有业务。在下面添加第一项。": "No services yet. Add your first one below.",
+  "例如：针对一个具体问题的解读，一次讲清楚。": "e.g. A reading for one specific question, made clear in one session.",
+  "例如：单一问题解读": "e.g. Single-question reading",
+  "问路人在你的业务页点\"发起联系\"之后，会出现在这里。下面是示例。": "When a seeker clicks \"Contact\" on your service page, the request appears here. These are samples.",
+  "阿青": "A-Qing",
+  "阿": "A",
+  "小周": "Xiao Zhou",
+  "小": "X",
+  "2 小时前": "2 hours ago",
+  "昨天": "Yesterday",
+  "3 天前": "3 days ago",
+  "最近在考虑要不要换城市生活，想请您看一看。": "I am thinking about moving to another city. Could you take a look for me?",
+  "想约一次感情方面的解读，周末有时间吗？": "I would like a reading about my love life. Are you free this weekend?",
+  "第一次看星盘，需要准备什么信息？": "This is my first chart reading. What information do I need to prepare?",
+  "回复": "Reply",
+  "已读": "Mark read",
+  "站内沟通还没有接通。以后这里会打开对话。": "Messaging is not connected yet. A conversation will open here later.",
+  // ---- 用户协议 ----
+  "草稿。上线前需由律师审核。": "Draft. A lawyer must review this before launch.",
+  "一、平台性质": "1. About the platform",
+  "UNIVERSE（以下称“本平台”）是信息展示与匹配平台，为用户与引路人提供相互了解和联系的渠道。“引路人”指经本平台认证、在本平台提供咨询或课程的个人。": "UNIVERSE (\"the Platform\") is a listing and matching platform. It gives users and guides a way to learn about and contact each other. A \"guide\" is an individual certified by the Platform who offers sessions or courses on it.",
+  "引路人为独立个人，并非本平台的雇员或代理人。引路人发表的观点、解读和建议仅代表其本人，不代表本平台立场。": "Guides are independent individuals. They are not employees or agents of the Platform. The views, readings and advice of a guide are their own and do not represent the Platform.",
+  "二、服务性质": "2. Nature of the services",
+  "本平台上的咨询与课程属于文化、精神及个人成长范畴的交流，不构成医疗、心理治疗、法律或财务方面的专业意见，亦不能替代上述专业服务。": "Sessions and courses on the Platform are exchanges in the areas of culture, spirituality and personal growth. They are not medical, psychotherapeutic, legal or financial advice, and they do not replace those professional services.",
+  "任何解读均不保证特定结果。用户应结合自身判断作出决定。": "No reading guarantees a particular outcome. Users should use their own judgement when making decisions.",
+  "如用户正处于危机之中，或有伤害自己或他人的想法，请立即联系当地紧急服务或专业援助机构。": "If you are in crisis, or are thinking about harming yourself or others, contact your local emergency services or a professional support service immediately.",
+  "三、账号": "3. Accounts",
+  "用户须年满 18 周岁方可注册及使用本平台。": "You must be at least 18 years old to register for and use the Platform.",
+  "用户应提供真实信息并妥善保管账号密码。通过该账号进行的一切操作，由账号持有人负责。": "Users must provide accurate information and keep their password safe. The account holder is responsible for all activity under the account.",
+  "四、引路人认证": "4. Guide certification",
+  "引路人须经本平台邀请或审核后方可入驻。": "Guides may join only after invitation or review by the Platform.",
+  "认证表示本平台已核对引路人提交的材料，不构成对其服务效果的保证。": "Certification means the Platform has checked the materials a guide submitted. It is not a guarantee of the results of their services.",
+  "五、平台内沟通": "5. Communication on the Platform",
+  "咨询及相关沟通应通过本平台提供的渠道完成，以便在出现问题时，本平台能够查证并协助处理。": "Sessions and related communication should take place through the channels the Platform provides, so that the Platform can verify what happened and help if a problem arises.",
+  "用户与引路人私下交换联系方式，或在本平台之外沟通、付款或交易的，本平台无法核实相关情况。在法律允许的范围内，由此产生的纠纷及损失，本平台不承担责任。": "If a user and a guide exchange contact details privately, or communicate, pay or trade outside the Platform, the Platform cannot verify what took place. To the extent permitted by law, the Platform is not liable for any resulting dispute or loss.",
+  "六、行为规范": "6. Code of conduct",
+  "用户不得骚扰、欺诈或冒充他人，不得发布违法或侵权内容，不得诱导他人离开本平台进行交易。": "Users must not harass, defraud or impersonate others, post unlawful or infringing content, or induce others to trade outside the Platform.",
+  "对于违反规范的账号，本平台有权采取限制功能、暂停或关闭账号等措施。": "The Platform may restrict features of, suspend or close any account that breaks these rules.",
+  "七、责任范围": "7. Liability",
+  "在法律允许的范围内，本平台不对引路人提供的内容及其服务结果承担责任。": "To the extent permitted by law, the Platform is not liable for content provided by guides or for the results of their services.",
+  "本协议不排除或限制法律规定的、不可排除的消费者权利。": "Nothing in these Terms excludes or limits consumer rights that cannot be excluded by law.",
+  "八、协议变更": "8. Changes to these Terms",
+  "本平台可能不时更新本协议。如有重大变更，将在平台上提前公告。变更生效后继续使用本平台的，视为接受更新后的内容。": "The Platform may update these Terms from time to time. Material changes will be announced on the Platform in advance. Continued use after a change takes effect means you accept the updated Terms.",
+  "九、联系方式": "9. Contact",
+  "对本协议如有疑问，请联系：（联系邮箱待填写）": "For questions about these Terms, contact: (email to be added)",
+  // ---- 隐私政策 ----
+  "一、基本原则": "1. Principles",
+  "本平台尊重并保护用户隐私，仅收集提供服务所必需的信息，不出售用户的个人信息。": "The Platform respects and protects user privacy. It collects only the information needed to provide the service and does not sell personal information.",
+  "二、收集的信息": "2. Information we collect",
+  "账号信息：称呼、邮箱及密码。密码经加密后保存。": "Account information: display name, email and password. Passwords are stored in encrypted form.",
+  "引路人申请材料：擅长方向、从业时间、案例记录、学习记录、证书及自我介绍。": "Guide application materials: practices, years of experience, case records, study records, certificates and introduction.",
+  "使用记录：收藏、联系请求、搜索与推荐中填写的内容，以及保障平台安全所需的基本日志。": "Usage records: saved items, contact requests, what you enter in search and suggestions, and the basic logs needed to keep the Platform secure.",
+  "三、信息的使用": "3. How we use information",
+  "上述信息用于创建和管理账号、协助用户联系引路人、审核引路人申请、处理投诉与纠纷，以及保障平台安全。": "This information is used to create and manage accounts, help users contact guides, review guide applications, handle complaints and disputes, and keep the Platform secure.",
+  "四、信息的可见范围": "4. Who can see information",
+  "引路人主页上的公开资料对所有访客可见。": "Public details on a guide's profile are visible to all visitors.",
+  "引路人申请材料仅本平台审核人员可见。": "Guide application materials are visible only to the Platform's reviewers.",
+  "仅在以下情形，本平台会向第三方提供用户信息：已取得用户同意；提供给为本平台提供技术服务、并受保密义务约束的供应商；法律法规要求。": "The Platform shares user information with third parties only in these cases: with the user's consent; with suppliers who provide technical services to the Platform and are bound by confidentiality; or where the law requires it.",
+  "五、咨询中的私人内容": "5. Private content in sessions",
+  "咨询可能涉及出生信息、感情、健康等私人内容。用户可自行决定分享的范围。": "Sessions may involve private matters such as birth details, relationships and health. Users decide how much to share.",
+  "引路人对咨询内容负有保密义务。": "Guides have a duty to keep session content confidential.",
+  "六、保存与删除": "6. Retention and deletion",
+  "账号存续期间，本平台将保存相关信息。": "The Platform keeps the relevant information for as long as the account exists.",
+  "用户可申请注销账号。注销后，本平台将删除其个人信息或作匿名化处理，法律法规要求保留的除外。": "Users may ask to close their account. After closure, the Platform deletes or anonymises their personal information, except where the law requires it to be kept.",
+  "七、用户权利": "7. Your rights",
+  "用户有权查阅、更正或删除其个人信息，并可撤回此前作出的同意。": "Users may access, correct or delete their personal information, and may withdraw consent they have given.",
+  "八、未成年人": "8. Minors",
+  "本平台不面向未满 18 周岁的用户，亦不会在知情的情况下收集未成年人的信息。": "The Platform is not intended for anyone under 18 and does not knowingly collect information from minors.",
+  "九、变更与联系": "9. Changes and contact",
+  "本平台可能不时更新本政策。如有重大变更，将在平台上提前公告。": "The Platform may update this Policy from time to time. Material changes will be announced on the Platform in advance.",
+  "行使上述权利或有任何疑问，请联系：（联系邮箱待填写）": "To exercise these rights, or for any question, contact: (email to be added)",
+};
+
+// 带数字或名字的句子，没办法一句句列出来，在这里按规律翻译。
+// 每一行：左边是句子的样子，右边是怎么拼出英文。
+const EN_RULES = [
+  [/^(\d+) 个门类$/, m => m[1] + (m[1] === "1" ? " practice" : " practices")],
+  [/^(\d+) 位引路人$/, m => m[1] + (m[1] === "1" ? " guide" : " guides")],
+  [/^查看(.+)的主页$/, m => "View " + tr(m[1]) + "'s profile"],
+  [/^欢迎回来，(.+)$/, m => "Welcome back, " + tr(m[1])],
+  [/^(.+)，欢迎回来$/, m => "Welcome back, " + tr(m[1])],
+  [/^主页完成度\s*(\d+) \/ (\d+)$/, m => "Profile completeness  " + m[1] + " / " + m[2]],
+  [/^(.+)（已添加）$/, m => tr(m[1]) + " (added)"],
+  [/^编辑：(.+)$/, m => "Edit: " + tr(m[1])],
+  [/^(.+) · (.+)$/, m => tr(m[1]) + " · " + tr(m[2])],
+  [/^看起来是(.+)。可以先看看这几个方向：$/, m => "This sounds like it is about " + m[1].split("，以及").map(tr).join(", and ") + ". You could start with these:"],
+  [/^(.+)的(.+)$/, m => EN[m[1]] && EN[m[2]] ? EN[m[1]] + "'s " + EN[m[2]] : null],   // 例如：林见月的占星
+];
+
+// 门类圆圈里的那个字：英文版自动用英文名的第一个字母。例如 Tarot 用 T
+DOMAINS.forEach(d => { if (EN[d.name] && EN[d.glyph] == null) EN[d.glyph] = EN[d.name][0]; });
+
+// ---- 下面是切换语言的机关，一般不用改 ----
+let lang = "zh";
+try { if (localStorage.getItem("universe-lang") === "en") lang = "en"; } catch (e) {}   // 记住上次选的语言
+// 把一句中文换成英文。找不到就原样返回
+function tr(text) {
+  if (EN[text] != null) return EN[text];
+  for (const [shape, build] of EN_RULES) { const m = text.match(shape); if (m) { const r = build(m); if (r != null) return r; } }
+  return text;
+}
+const HAS_ZH = /[\u3400-\u9fff]/, LANG_ATTRS = ["placeholder", "title", "aria-label", "alt"], zhOf = new WeakMap();
+// 把页面上某一块里的中文全部换成英文，并记住原来的中文，方便切回去
+function translateIn(root) {
+  if (lang !== "en" || !root) return;
+  const texts = [];
+  if (root.nodeType === 3) texts.push(root);
+  else if (root.nodeType === 1) { const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) texts.push(n); }
+  else return;
+  texts.forEach(n => {
+    const p = n.parentElement; if (!p || p.closest("script,style,textarea,[data-keep]")) return;
+    const raw = n.nodeValue, t = raw.trim(); if (!t || !HAS_ZH.test(t)) return;
+    const en = tr(t); if (en === t) return;
+    const out = raw.replace(t, () => en); zhOf.set(n, { zh: raw, en: out }); n.nodeValue = out;
+  });
+  if (root.nodeType !== 1) return;
+  [root, ...root.querySelectorAll("*")].forEach(el => {
+    if (el.closest("[data-keep]")) return;
+    LANG_ATTRS.forEach(a => { const v = el.getAttribute(a); if (v && HAS_ZH.test(v)) { const en = tr(v); if (en !== v) { el.setAttribute("data-zh-" + a, v); el.setAttribute(a, en); } } });
+    // 输入框里预先填好的示例文字（用户自己打的字不动）
+    const isText = el.tagName === "TEXTAREA" || (el.tagName === "INPUT" && (el.type === "text" || !el.type));
+    if (isText && el.value === el.defaultValue && HAS_ZH.test(el.value)) { el._zh = el.value; el.value = el._en = el.value.split("\n").map(tr).join("\n"); }
+  });
+}
+// 切回中文：把记住的原文放回去
+function restoreZh() {
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) { const rec = zhOf.get(n); if (rec && n.nodeValue === rec.en) n.nodeValue = rec.zh; }
+  document.querySelectorAll("*").forEach(el => {
+    LANG_ATTRS.forEach(a => { const v = el.getAttribute("data-zh-" + a); if (v != null) { el.setAttribute(a, v); el.removeAttribute("data-zh-" + a); } });
+    if (el._zh != null && el.value === el._en) el.value = el._zh;
+    delete el._zh; delete el._en;
+  });
+}
+function setLang(next) {
+  lang = next === "en" ? "en" : "zh";
+  try { localStorage.setItem("universe-lang", lang); } catch (e) {}
+  document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+  document.getElementById("lang-btn").textContent = lang === "en" ? "中文" : "EN";
+  if (lang === "en") translateIn(document.body); else restoreZh();
+}
+// 页面内容一有变化（换页、弹出提示、按钮变字），马上把新出现的中文换成英文
+new MutationObserver(list => {
+  if (lang !== "en") return;
+  list.forEach(m => { if (m.type === "characterData") translateIn(m.target); else m.addedNodes.forEach(translateIn); });
+}).observe(document.body, { childList: true, subtree: true, characterData: true });
+document.getElementById("lang-btn").addEventListener("click", () => setLang(lang === "en" ? "zh" : "en"));
+
+/* ============================================================
    第三区：页面结构
    网站一共四种页面，每种对应下面一个函数。
    想改某种页面上放什么、怎么排，改对应的函数。
@@ -732,7 +1266,7 @@ function pageHome() {
 // 首页搜索：按门类名称、门类介绍、引路人名字、引路人简介查找
 function searchAll(q) {
   q = q.trim().toLowerCase(); if (!q) return [];
-  const hit = t => t.toLowerCase().includes(q);
+  const hit = t => t.toLowerCase().includes(q) || (lang === "en" && tr(t).toLowerCase().includes(q));   // 英文版里也能用英文搜
   const out = [];
   DOMAINS.forEach(d => { if (hit(d.name) || hit(d.intro)) out.push({ go: "d-" + d.id, type: "门类", title: d.name, sub: d.intro }); });
   MENTORS.forEach(m => { if (hit(m.name) || hit(m.tagline)) out.push({ go: "m-" + m.id, type: "引路人", title: m.name, sub: m.tagline }); });
@@ -742,17 +1276,18 @@ function searchAll(q) {
 // 给新人的推荐。原型阶段用关键词做简单匹配：左边是可能出现的词，右边是推荐的门类 id。
 // 以后接入后台时，这一段会换成真正的匹配。
 const GUIDE_RULES = [
-  { words: ["感情", "恋爱", "分手", "婚姻", "喜欢", "对象", "复合", "暧昧", "暗恋", "伴侣"], domains: ["tarot", "astrology", "lenormand"], why: "和感情、关系有关的问题" },
-  { words: ["工作", "事业", "跳槽", "辞职", "创业", "职业", "升职", "换工作", "选择", "决定", "拿不定"], domains: ["qimen", "tarot", "bazi"], why: "和事业、选择有关的问题" },
-  { words: ["焦虑", "失眠", "压力", "累", "疲惫", "紧张", "烦", "静不下", "睡不着", "情绪"], domains: ["meditation", "healing"], why: "和情绪、身心状态有关的问题" },
-  { words: ["自己", "性格", "方向", "迷茫", "人生", "天赋", "适合", "未来", "命运"], domains: ["bazi", "astrology", "ziwei"], why: "想更了解自己、看清方向" },
-  { words: ["搬家", "房子", "家里", "办公室", "风水", "布局", "装修"], domains: ["fengshui"], why: "和居住、空间有关的问题" },
-  { words: ["学习", "入门", "想学", "课程", "了解一下"], domains: ["tarot", "astrology", "meditation"], why: "想入门学习" },
+  { words: ["感情", "love", "relationship", "breakup", "break up", "broke up", "marriage", "partner", "boyfriend", "girlfriend", "dating", "crush", "husband", "wife", "恋爱", "分手", "婚姻", "喜欢", "对象", "复合", "暧昧", "暗恋", "伴侣"], domains: ["tarot", "astrology", "lenormand"], why: "和感情、关系有关的问题" },
+  { words: ["工作", "work", "job", "career", "quit", "resign", "business", "promotion", "decision", "decide", "choice", "事业", "跳槽", "辞职", "创业", "职业", "升职", "换工作", "选择", "决定", "拿不定"], domains: ["qimen", "tarot", "bazi"], why: "和事业、选择有关的问题" },
+  { words: ["焦虑", "anxious", "anxiety", "insomnia", "stress", "tired", "exhausted", "nervous", "sleep", "emotion", "overwhelm", "burnout", "失眠", "压力", "累", "疲惫", "紧张", "烦", "静不下", "睡不着", "情绪"], domains: ["meditation", "healing"], why: "和情绪、身心状态有关的问题" },
+  { words: ["自己", "myself", "personality", "direction", "lost", "talent", "future", "destiny", "purpose", "who i am", "性格", "方向", "迷茫", "人生", "天赋", "适合", "未来", "命运"], domains: ["bazi", "astrology", "ziwei"], why: "想更了解自己、看清方向" },
+  { words: ["搬家", "move", "moving", "house", "home", "office", "feng shui", "layout", "renovat", "apartment", "房子", "家里", "办公室", "风水", "布局", "装修"], domains: ["fengshui"], why: "和居住、空间有关的问题" },
+  { words: ["学习", "learn", "beginner", "course", "study", "class", "curious", "入门", "想学", "课程", "了解一下"], domains: ["tarot", "astrology", "meditation"], why: "想入门学习" },
 ];
 // 出现这些词时不做推荐，改为提示求助渠道
-const CRISIS_WORDS = ["自杀", "不想活", "想死", "伤害自己", "自残", "结束生命", "活不下去", "轻生"];
+const CRISIS_WORDS = ["suicide", "suicidal", "kill myself", "want to die", "end my life", "self-harm", "self harm", "hurt myself", "harm myself", "don't want to live", "dont want to live", "no reason to live", "自杀", "不想活", "想死", "伤害自己", "自残", "结束生命", "活不下去", "轻生"];
 
 function guideMatch(text) {
+  text = text.toLowerCase();
   if (CRISIS_WORDS.some(w => text.includes(w))) return { crisis: true };
   const hits = GUIDE_RULES.filter(rule => rule.words.some(w => text.includes(w)));
   const picked = [], reasons = hits.map(r => r.why);
@@ -763,9 +1298,17 @@ function guideMatch(text) {
 function guideHtml(res) {
   if (res.crisis) return `
     <div class="guide-care">
-      <p><strong>听起来您现在很不容易。</strong></p>
-      <p>如果您有伤害自己的想法，请立即联系当地的紧急服务或心理援助热线，也请告诉一位您信任的人。</p>
-      <p>平台上的咨询不能替代专业的危机援助。</p>
+      <p><strong>谢谢你愿意说出来。你现在一定很难受。</strong></p>
+      <p>我们希望你平安。请先不要伤害自己，也不要一个人扛着。你并不孤单，帮助是存在的。</p>
+      <p>请现在就联系能帮到你的人：</p>
+      <ul>
+        <li>有生命危险时，请立即拨打当地的急救电话。</li>
+        <li>中国大陆：急救电话 <a href="tel:120">120</a>，心理援助热线 <a href="tel:12356">12356</a></li>
+        <li>澳大利亚：急救电话 <a href="tel:000">000</a>，Lifeline 危机热线 <a href="tel:131114">13 11 14</a></li>
+        <li>其他地区：在 <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> 可以查到当地的热线</li>
+        <li>也请告诉一位你信任的人，请他陪着你。</li>
+      </ul>
+      <p class="hint">平台上的咨询不能替代专业的危机援助。</p>
     </div>`;
   const lead = res.reasons.length ? `看起来是${res.reasons.join("，以及")}。可以先看看这几个方向：` : "可以先从这几个方向看看：";
   return `<p class="guide-lead">${lead}</p><div class="bars">${res.domains.map(id => { const d = find(DOMAINS, id); return `
@@ -1481,4 +2024,5 @@ window.addEventListener("hashchange", () => {
   if (token !== current) render(token);
 });
 render(location.hash.slice(1) || "home");
+setLang(lang);   // 套用上次选的语言
 </script>
